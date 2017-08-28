@@ -8,11 +8,11 @@ class CallSendApi
 {
 	const URL = 'https://graph.facebook.com/v2.6/me/messages';
 	private $pageAccessToken;
-	public function __construct(string $pageAccessToken)
+	public function __construct($pageAccessToken)
 	{
 		$this->pageAccessToken = $pageAccessToken;
 	}
-	public function make(array $message, string $url = null, $method = 'POST') :string
+	public function make($message, $url = null, $method = 'POST') :string
 	{
 		$cliente = new Client;
 		$url = $url ?? CallSendApi::URL;

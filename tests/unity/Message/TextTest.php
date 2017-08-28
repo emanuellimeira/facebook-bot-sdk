@@ -3,8 +3,7 @@ namespace CodeBot\Message;
 
 use PHPUnit\Framework\TestCase;
 
-
-class TextTest extends TesteCase
+class TextTest extends TestCase
 {
 	
 	public function testRetornaUmArray ()

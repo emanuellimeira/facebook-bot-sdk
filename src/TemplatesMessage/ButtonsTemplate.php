@@ -13,7 +13,7 @@ class ButtonsTemplate implements Message
 
 	public function add($element)
 	{
-		$this->buttons[] = $element;
+		$this->buttons[] = $element->get();
 	}
 
 	public function message(string $messageText) :array

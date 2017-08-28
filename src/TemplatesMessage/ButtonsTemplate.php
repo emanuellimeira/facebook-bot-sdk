@@ -1,6 +1,7 @@
 <?php
 namespace CodeBot\TemplatesMessage;
 use CodeBot\Message\Message;
+use CodeBot\Element\ElementInterface;
 class ButtonsTemplate implements Message
 {
 	protected $buttons = [];
@@ -11,7 +12,7 @@ class ButtonsTemplate implements Message
 		$this->recipientId = $recipientId;
 	}
 
-	public function add($element)
+	public function add(ElementInterface $element)
 	{
 		$this->buttons[] = $element->get();
 	}

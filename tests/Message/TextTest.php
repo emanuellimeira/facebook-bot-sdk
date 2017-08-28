@@ -1,5 +1,4 @@
 <?php 
-
 namespace CodeBot\Message;
 
 use  PHPUnit\Framework\TestCase;

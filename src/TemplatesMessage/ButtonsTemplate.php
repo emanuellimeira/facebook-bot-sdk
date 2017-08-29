@@ -1,8 +1,8 @@
 <?php
 namespace CodeBot\TemplatesMessage;
-use CodeBot\Message\Message;
 use CodeBot\Element\ElementInterface;
-class ButtonsTemplate implements Message
+use CodeBot\TemplatesMessage\TemplatesInterface;
+class ButtonsTemplate implements TemplateInterface
 {
 	protected $buttons = [];
 	protected $recipientId;

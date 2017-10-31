@@ -25,13 +25,13 @@ class ProductOrder implements ElementInterface
 		$result['subtitle'] = $this->subtitle;
 		$result['price'] = $this->price;
 
-		if ($this->quantity !=== null) {
+		if ($this->quantity !== null) {
 			$result['quantity'] = $this->quantity;
 		}
-		if ($this->currency !=== null) {
+		if ($this->currency !== null) {
 			$result['currency'] = $this->currency;
 		}
-		if ($this->image_url !=== null) {
+		if ($this->image_url !== null) {
 			$result['image_url'] = $this->image_url;
 		}
 		return $result;

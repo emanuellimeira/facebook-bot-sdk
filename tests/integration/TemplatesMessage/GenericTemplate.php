@@ -1,20 +1,26 @@
 <?php
+
 namespace CodeBot\TemplatesMessage;
+
 use CodeBot\Element\Button;
 use CodeBot\Element\Product;
 use PHPUnit\Framework\TestCase;
+
 class GenericTemplateTest extends TestCase
 {
     public function testListaComDoisProdutos()
     {
         $button = new Button('web_url', null, 'https://angular.io/');
         $product = new Product('Produto 1', 'https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAqfAAAAJDQwZWJiNTdkLThiYjUtNGQ2YS1iMzJjLTRiMmQ5YjZiMDNiNw.png', 'Curso de angular', $button);
+
         $button = new Button('web_url', null, 'http://www.php.net/');
         $product2 = new Product('Produto 2', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png', 'Curso de PHP', $button);
+
         $template = new GenericTemplate(1234);
         $template->add($product);
         $template->add($product2);
         $actual = $template->message('qwe');
+
         $expected = [
             'recipient' => [
                 'id' => 1234
@@ -48,6 +54,7 @@ class GenericTemplateTest extends TestCase
                 ]
             ]
         ];
+
         $this->assertEquals($expected, $actual);
     }
 }

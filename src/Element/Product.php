@@ -3,15 +3,15 @@ namespace CodeBot\Element;
 class Product implements ElementInterface
 {
 	private $title;
-	private $img_url;
+	private $image_url;
 	private $subtitle;
 	private $default_action;
 	private $buttons;
 
-	public function __construct(string $title, ? string $img_url = null, ? string $subtitle = null, Button $default_action, $buttons)
+	public function __construct(string $title, ? string $image_url = null, ? string $subtitle = null, Button $default_action)
 	{
 		$this->title = $title;
-		$this->img_url = $img_url;
+		$this->image_url = $image_url;
 		$this->subtitle = $subtitle;
 		$this->default_action = $default_action;
 		
@@ -28,13 +28,16 @@ class Product implements ElementInterface
 		if ($this->image_url !== null) {
 			$result['image_url'] = $this->image_url;
 		}
+		if ($this->subtitle !== null) {
+			$result['subtitle'] = $this->subtitle;
+		}
 		if ($this->default_action !== null) {
 			$default_action = $this->default_action->get();
 			unset($default_action['title']);
 			$result['default_action'] = $default_action;
 		}
-		if ($this->image_url !== null) {
-			$result['image_url'] = $this->image_url;
+		if ($this->buttons !== null) {
+			$result['buttons'] = $this->buttons;
 		}
 		return $result;
 	}

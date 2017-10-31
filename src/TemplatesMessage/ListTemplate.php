@@ -24,15 +24,14 @@ class ListTemplate implements TemplateInterface
 				'id' => $this->recipientId
 			],
 			'message' => [
-			'attachment' => [
-			'type' => 'template',
-				'payload' => [
-					'template_type' => 'list',
-					'buttons' => $this->products
+				'attachment' => [
+					'type' => 'template',
+					'payload' => [
+						'template_type' => 'list',
+						'buttons' => $this->products
+					]
 				]
 			]
-			
-		]
 		];
 	}
 

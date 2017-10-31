@@ -1,7 +1,7 @@
 <?php
 namespace CodeBot\TemplatesMessage;
 use CodeBot\Element\ElementInterface;
-use CodeBot\TemplatesMessage\TemplatesInterface;
+//use CodeBot\TemplatesMessage\TemplatesInterface;
 class GenericTemplate implements TemplateInterface
 {
 	protected $products = [];
@@ -24,16 +24,14 @@ class GenericTemplate implements TemplateInterface
 				'id' => $this->recipientId
 			],
 			'message' => [
-			'attachment' => [
-			'type' => 'template',
-				'payload' => [
-					'template_type' => 'generic',
-					'text' => $messageText,
-					'buttons' => $this->products
+				'attachment' => [
+					'type' => 'template',
+					'payload' => [
+						'template_type' => 'generic',
+						'buttons' => $this->products
+					]
 				]
 			]
-			
-		]
 		];
 	}
 

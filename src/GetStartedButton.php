@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace CodeBot;
 class GetStartedButton
 {
@@ -6,7 +6,7 @@ class GetStartedButton
 	{
 		return [
 			'get_started' => [
-			'payload' => $postback
+				'payload' => $postback
 		]
 		];
 	}

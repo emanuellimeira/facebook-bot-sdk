@@ -39,7 +39,7 @@ class MenuManagerTest extends TestCase
         foreach ($call_to_actions as $action) {
             $menu->callToAction($action['id'], $action['type'], $action['title'], $action['parent_id'], $action['value']);
         }
-        $callSendApi = new CallSendApi('EAAZA5gQm86jEBADovZAVHsItu3pQI0CS0ZB4iIMyxmuYJMteRPykRsb3ZAiZCaB2MKDxrOkcW215C4fKA92SCqo9P1Uuydiopt4YrNwxfYPBcccnUmojCxhZBsQtZCl3Xk9Qp1evv2EYxZAvAWUjngfS2bUhWUZAGpPx04eUuhFbMJwZDZD');
+        $callSendApi = new CallSendApi('AQUI_VAI_SEU_PAGE_ACCESS_TOKEN');
         $result = $callSendApi->make($menu->toArray(), CallSendApi::URL_PROFILE);
         $this->assertTrue(is_string($result));
     }
